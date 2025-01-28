@@ -1,5 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { Categoria } from './categoria/entities/categoria.entity';
+import { CategoriaModule } from './categoria/categoria.module';
 
 @Module({
   imports: [
@@ -10,9 +12,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       username: 'root', //Usuario do banco de dados
       password: '193243', //Senha do banco de dados
       database: 'db_housemed', //Banco de dados housemed farmacia 
-      entities: [],   //Entidades do banco de dados
+      entities: [Categoria],   //Entidades do banco de dados
       synchronize: true, //Sincronização do banco de dados
-    })
+    }), CategoriaModule,
   ],
   controllers: [],
   providers: [],

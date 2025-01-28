@@ -11,4 +11,4 @@ import { CategoriaController } from "./controllers/categoria.controller";
     controllers: [CategoriaController],
     exports: [TypeOrmModule]
 })
-export class PostagemModule {}
+export class CategoriaModule {}
